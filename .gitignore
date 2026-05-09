@@ -1,4 +1,5 @@
-
+# Ignore versions set up just for my local machine
+personal_convert_to_geopackage.py
 
 # Ignore data folder
 data/
