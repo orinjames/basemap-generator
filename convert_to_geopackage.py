@@ -3,26 +3,6 @@ from pathlib import Path
 
 DATA_ROOT = Path(r"C:\Users\orinj\Documents")
 
-
-
-
-# # --- Paths ---
-# DATA_ROOT = Path(r"C:\Users\orinj\Documents\Urban Planning\GIS Data")
-
-# paths = {
-#     "boroughs":         DATA_ROOT / "Borough Boundaries" / "geo_export_a539c2a7-d30a-4c26-9540-a9fb57bc35cf.shp",
-#     "building_footprints":       DATA_ROOT / "IBX" / "bk_qn_building_footprints.gpkg",
-#     "subway_lines":     DATA_ROOT / "IBX" / "Subway Lines" / "geo_export_9137b667-8e18-40c5-9687-65c426cb6fcb.shp",
-#     "pavement_edge":    DATA_ROOT / "NYC Planimetric Database_ Pavement Edge_20251031" / "geo_export_636f5a0b-00ce-4659-a89e-be479aa02b6b.shp",
-#     "sidewalks":        DATA_ROOT / "NYC Planimetric Database_ Sidewalk_20251031" / "geo_export_d77bc740-0279-450a-a0b4-c73f8ece7a4a.shp",
-#     "pluto":            DATA_ROOT / "Pluto" / "MapPLUTO25v3.gdb",
-#     "streets":          DATA_ROOT / "DCM.gdb",
-#     "parks":            DATA_ROOT / "Parks Properties_20251104" / "geo_export_03be6ed9-5d8d-403e-b157-70947265fbde.shp",
-# }
-
-
-
-
 # List of files to convert: (input_path, output_path, optional layer name)
 conversions = [
     # Borough boundaries
@@ -75,6 +55,19 @@ conversions = [
         DATA_ROOT / "Urban Planning" / "GIS Data" / "DCM.gdb",
         DATA_ROOT / "Python" / "Basemap Generator" / "data" / "streets.gpkg",
         "DCM_StreetCenterLine"
+    ),
+
+    # Zoning districts
+    (
+        DATA_ROOT / "Urban Planning" / "GIS Data" / "zoning.gdb",
+        DATA_ROOT / "Python" / "Basemap Generator" / "data" / "zoning_districts.gpkg",
+        "nyzd"
+    ),
+    # Commercial overlays
+    (
+        DATA_ROOT / "Urban Planning" / "GIS Data" / "zoning.gdb",
+        DATA_ROOT / "Python" / "Basemap Generator" / "data" / "commercial_overlays.gpkg",
+        "nyco"
     ),
 ]
 
